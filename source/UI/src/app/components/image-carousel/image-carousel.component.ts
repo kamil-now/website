@@ -1,0 +1,54 @@
+// carousel.component.ts
+
+import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-image-carousel',
+  templateUrl: './image-carousel.component.html',
+  styleUrls: ['./image-carousel.component.scss'],
+})
+export class ImageCarouselComponent implements OnInit, OnDestroy {
+  @Input() fit: 'cover' | 'contain' = 'cover'
+  @Input() height: string = 'auto';
+  @Input() width: string = '100%';
+  @Input() images: string[] = [];
+  
+  currentIndex: number = 0;
+  isFullScreen: boolean = false;
+  
+  private autoPlayInterval?: number
+  ngOnInit() {
+    this.startAutoPlay();
+  }
+
+  ngOnDestroy() {
+    this.stopAutoPlay();
+  }
+  next(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  }
+
+  prev(): void {
+    this.currentIndex =
+      this.currentIndex === 0 ? this.images.length - 1 : this.currentIndex - 1;
+  }
+
+  toggleFullScreen(): void {
+    this.isFullScreen = !this.isFullScreen;
+    if (this.isFullScreen) {
+      this.stopAutoPlay();
+    } else {
+      this.startAutoPlay();
+    }
+  }
+
+  private startAutoPlay(): void {
+    this.autoPlayInterval = window.setInterval(() => {
+      this.next();
+    }, 3000);
+  }
+
+  private stopAutoPlay(): void {
+    clearInterval(this.autoPlayInterval);
+  }
+}
