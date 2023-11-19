@@ -1,12 +1,19 @@
 .logo {
-  color: #FFFFFF;
+  color: var(--color-text-light);
   padding: 1rem;
   font-size: 1.25rem;
   font-weight: bold;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
+
+  &.large {
+    font-size: 3rem;
+  }
+}
+
+.hover-accent {
   &:hover span {
-    color: #039DFF;
+    color: var(--color-accent);
   }
 }

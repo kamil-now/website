@@ -5,14 +5,14 @@ h1 {
 h2 {
 	text-align: center;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: var(--color-text-light);
 }
 
 .underline {
 	margin: 0 auto 40px;
 	width: 60px;
 	height: 4px;
-	background-color: #039DFF;
+	background-color: var(--color-accent);
 }
 
 .faq {
@@ -41,8 +41,15 @@ h2 {
 	.faq {
 		background-image: unset;
 		background-color: #051C2A;
+
 		&-list {
 			padding: 0;
 		}
+	}
+}
+
+@media (min-width: 1550px) {
+	.faq {
+		height: calc(100vh - 10rem);
 	}
 }

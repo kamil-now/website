@@ -1,6 +1,6 @@
 .trips {
   padding: 3rem 0;
-  background-color: #F8F9FA;
+  background-color: var(--color-background);
 }
 .trips-content {
   display: flex;
@@ -27,7 +27,7 @@
     max-width: calc(25% - 20px);
   }
   h3 {
-    color: #039DFF;
+    color: var(--color-accent);
     text-transform: uppercase;
   }
   span {
@@ -53,7 +53,7 @@
   .link {
     z-index: 0;
     position: relative;
-    color: #039DFF;
+    color: var(--color-accent);
     text-decoration: none;
     transition: transform 0.3s;
     padding: 2px 2px;
@@ -66,12 +66,12 @@
     left: 0;
     height: 1.5px;
     width: 100%;
-    background-color: #039DFF;
+    background-color: var(--color-accent);
     z-index: -1;
     transition: height, 0.3s;
   }
   .link:hover {
-    color: #FFFFFF;
+    color: var(--color-text-light);
   }
 
   .link:hover::after {
@@ -89,4 +89,7 @@
 	width: 30px !important;
 	margin-right: 10px;
 	margin-bottom: 5px;
+}
+.disclaimer {
+  font-size: 0.5rem;
 }

@@ -14,10 +14,11 @@ import { TripsComponent } from './components/trips/trips.component';
 import { AboutTripComponent } from './components/about-trip/about-trip.component';
 import { TeamComponent } from './components/team/team.component';
 import { FaqPageComponent } from './pages/faq-page/faq-page.component';
-import { PageContainerComponent } from './pages/page-container/page-container.component';
 import { CollapseCardComponent } from './components/collapse-card/collapse-card.component';
-import { NavigationComponent } from './pages/navigation/navigation.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { TripCardComponent } from './components/trip-card/trip-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +33,11 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     AboutTripComponent,
     TeamComponent,
     FaqPageComponent,
-    PageContainerComponent,
     CollapseCardComponent,
     NavigationComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    TripCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
