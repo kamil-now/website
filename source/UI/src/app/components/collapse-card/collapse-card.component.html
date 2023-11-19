@@ -1,0 +1,9 @@
+<div class="collapse-card">
+  <div class="collapse-card-header" (click)="toggleCollapse()">
+    <span>{{ isCollapsed ? "+" : "-" }}</span>
+    <span>{{ title }}</span>
+  </div>
+  <div class="collapse-card-body" [class.expanded]="!isCollapsed">
+    <ng-content></ng-content>
+  </div>
+</div>

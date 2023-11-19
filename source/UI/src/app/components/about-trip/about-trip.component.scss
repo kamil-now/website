@@ -1,0 +1,107 @@
+.about-trip {
+  padding: 3rem 0;
+  background-color: #F8F9FA;
+
+  &-content {
+    padding: 0 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    &-item {
+      padding: 1rem;
+      flex: 0 0 100%;
+      max-width: 100%;
+
+      @media (min-width: 768px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      @media (min-width: 1400px) {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+.google {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.box-map {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  cursor: pointer;
+}
+
+.box {
+  position: relative;
+  height: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  p {
+    text-align: justify;
+    // letter-spacing: 2px;
+  }
+
+  h2 {
+    letter-spacing: 4px;
+    text-align: left;
+  }
+
+  h3 {
+    text-align: left;
+    letter-spacing: 2px;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+li {
+  text-align: justify;
+  padding: 5px 0px;
+}
+
+ul {
+  padding: 0px 15px;
+}
+
+.text-muted {
+  font-size: 18px;
+}
+
+.box {
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 772px) {
+  .about-trip {
+    position: relative;
+
+    &-content {
+      padding: 0;
+    }
+
+    .google {
+      height: 300px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div #navigation class="navigation" >
+  <app-logo></app-logo>
+  <button class="navigation-toggle" type="button" (click)="toggle()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <div class="navigation-content" [class.show]="isOpen">
+    <a routerLink="/home" [queryParams]="{ section: 'aboutus' }">o nas</a>
+    <a routerLink="/home" [queryParams]="{ section: 'portfolio' }">Portfolio</a>
+    <a routerLink="/home" [queryParams]="{ section: 'prices' }">oferta</a>
+    <a routerLink="/home" [queryParams]="{ section: 'team' }">zespół</a>
+    <a routerLink="/home" [queryParams]="{ section: 'trip' }">o rejsie</a>
+    <a [routerLink]="currentRoute" [queryParams]="{ section: 'contact' }">kontakt</a>
+    <a routerLink="/faq" [queryParams]="{ section: 'faq' }">faq</a>
+  </div>
+</div>

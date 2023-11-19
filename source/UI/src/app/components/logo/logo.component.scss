@@ -1,0 +1,12 @@
+.logo {
+  color: #FFFFFF;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover span {
+    color: #039DFF;
+  }
+}

@@ -8,10 +8,13 @@ import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/cor
   styleUrls: ['./image-carousel.component.scss'],
 })
 export class ImageCarouselComponent implements OnInit, OnDestroy {
-  @Input() fit: 'cover' | 'contain' = 'cover'
-  @Input() height: string = 'auto';
-  @Input() width: string = '100%';
-  @Input() images: string[] = [];
+  @Input() fit: 'cover' | 'contain' = 'cover';
+
+  images: string[] = [
+    './assets/img/gallery/1.jpg',
+    './assets/img/gallery/2.jpg',
+    './assets/img/gallery/3.jpg',
+  ];
   
   currentIndex: number = 0;
   isFullScreen: boolean = false;

@@ -1,0 +1,27 @@
+<app-page-container #page>
+  <header id="home">
+    <div class="hero-img">
+      <div class="hero-shadow"></div>
+      <div class="hero-text">
+        <h1>witamy w The<span class="blue-text">Buoys</span></h1>
+        <p>rejsy, które tworzą horyzont</p>
+        <a
+          (click)="page.scrollToElement('aboutus')"
+          type="button"
+          class="btn btn-outline-light"
+          >poznaj nas</a
+        >
+      </div>
+      <div class="landing-page-footer" (click)="page.scrollToElement('aboutus')">
+        <i class="fa-solid fa-chevron-down bounce-top"></i>
+      </div>
+    </div>
+  </header>
+
+  <app-about-us id="aboutus"></app-about-us>
+  <app-destinations></app-destinations>
+  <app-portfolio id="portfolio"></app-portfolio>
+  <app-trips id="prices"></app-trips>
+  <app-team id="team"></app-team>
+  <app-about-trip id="trip"></app-about-trip>
+</app-page-container>
