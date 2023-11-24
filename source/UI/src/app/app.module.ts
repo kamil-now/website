@@ -19,6 +19,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { TripCardComponent } from './components/trip-card/trip-card.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { YachtComponent } from './pages/yacht-page/yacht-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavigationComponent,
     PortfolioComponent,
     TripCardComponent,
-    FooterComponent
+    FooterComponent,
+    YachtComponent
   ],
   imports: [
     BrowserModule,

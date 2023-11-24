@@ -1,5 +1,6 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { isFirstVisit } from '../../storage';
 
 @Component({
   selector: 'app-navigation',
@@ -16,13 +17,15 @@ export class NavigationComponent implements OnInit, AfterViewInit {
     return `/${this.route.routeConfig?.path}`;
   }
 
-  isOpen: boolean = false;
+  isOpen = false;
+  isFirstVisit = false;
 
   constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.route.queryParams.subscribe(() => this.isOpen = false);
+    this.isFirstVisit = isFirstVisit();
   }
 
   ngAfterViewInit(): void {
@@ -40,5 +43,8 @@ export class NavigationComponent implements OnInit, AfterViewInit {
 
   toggle() {
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.navigation.nativeElement.classList.add('navigation-shadow-bg');
+    }
   }
 }

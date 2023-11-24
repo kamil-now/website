@@ -2,21 +2,25 @@
   padding: 3rem 0;
   background-color: var(--color-background);
 }
+
 .trips-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
 }
+
 .trip-card {
   margin: 20px 10px;
   padding: 30px;
   background-color: #FFFFFF;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s;
+
   &:hover {
     transform: scale(1.05);
   }
+
   @media (min-width: 768px) {
     flex: 0 0 50%;
     max-width: calc(50% - 20px);
@@ -26,17 +30,21 @@
     flex: 0 0 25%;
     max-width: calc(25% - 20px);
   }
+
   h3 {
     color: var(--color-accent);
     text-transform: uppercase;
   }
+
   span {
     font-weight: bold;
   }
+
   button {
     padding: 10px 20px;
     text-transform: uppercase;
   }
+
   .price-tag {
     font-weight: bold;
     font-size: 22px;
@@ -47,9 +55,11 @@
 .footer {
   text-align: center;
   margin-top: 30px;
+
   a {
     text-decoration: none;
   }
+
   .link {
     z-index: 0;
     position: relative;
@@ -59,6 +69,7 @@
     padding: 2px 2px;
     margin: 2px 0;
   }
+
   .link::after {
     content: '';
     position: absolute;
@@ -70,6 +81,7 @@
     z-index: -1;
     transition: height, 0.3s;
   }
+
   .link:hover {
     color: var(--color-text-light);
   }
@@ -79,17 +91,19 @@
     border-radius: 3px;
   }
 }
+
 .price-icon {
-	width: 20px;
-	margin-bottom: 10px;
-	margin-right: 10px;
+  width: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .flag-icon {
-	width: 30px !important;
-	margin-right: 10px;
-	margin-bottom: 5px;
+  width: 30px !important;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
+
 .disclaimer {
   font-size: 0.5rem;
 }

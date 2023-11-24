@@ -1,20 +1,16 @@
-<div class="home">
-  <div class="home-content">
+<div class="home" [class.show-logo]="isFirstVisit">
+  <div class="home-brand">
     <app-logo size="large" (click)="scrollToTop()"></app-logo>
     <p class="slogan">Rejsy, które tworzą horyzont</p>
   </div>
-  <div
-    class="home-footer"
-    routerLink="/home"
-    [queryParams]="{ section: 'aboutus' }"
-  >
-    <i class="fa-solid fa-chevron-down bounce-top"></i>
+  <div class="home-content">
+    <app-trip-card
+      title="Chorwacja 2024"
+      [startOpen]="!isFirstVisit"
+      backgroundImageUrl="../../../assets/img/croatia2.jpg"
+    >
+    </app-trip-card>
   </div>
 </div>
 
-<app-about-us id="aboutus"></app-about-us>
-<app-destinations></app-destinations>
 <app-portfolio id="portfolio"></app-portfolio>
-<app-trips id="prices"></app-trips>
-<app-team id="team"></app-team>
-<app-about-trip id="trip"></app-about-trip>

@@ -25,7 +25,7 @@ export class FooterComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     window.addEventListener('scroll', () => {
-      if (window.scrollY >= 200) {
+      if (window.scrollY >= 100) {
         this.footer?.nativeElement.classList.add('show');
       } else {
         this.footer?.nativeElement.classList.remove('show');
