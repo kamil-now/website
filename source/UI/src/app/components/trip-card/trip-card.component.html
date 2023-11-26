@@ -1,65 +1,9 @@
-<!-- 
-
-4 kabiny 2-osobowe (1 zajmuje sternik), dla każdego komplet pościeli i ręczników
-darmowe WiFi, w każdej kabinie gniazdka 230V (działające tylko przy podłączeniu do prądu w porcie)
-poza tym w mesie jeden inwerter (jedno gniazdko 230V działające zawsze) oraz kilka gniazdek usb
-max 8 osób (wliczając sternika) - jacht jest 10 osobowy więc nie będzie tłoku
-tylko osoby +18
-
-Dojazd:
-samolot - Trogir jest blisko lotniska Split (ok. 6 km)
-samochód - parking w marinie 60EUR / tydzień
-
-Jeżeli nigdy nie byłeś/byłaś na rejsie jachtem żaglowym polecam zapoznać się z naszym FAQ.
-
-Oba turnusy zaczynają się i kończą w sobotę.
-
-1 turnus:
-+ w ostatni dzień możliwość zostania na łódce do późnego popołudnia - wygodna opcja w przypadku późniejszego wylotu ze splitu, można zostawić bagaże i pozwiedzać Trogir
-- zakrętowanie w dniu odbioru jachtu - może wiązać się z czekaniem w marinie aż jacht będzie gotowy do odbioru (i odebrany przez sternika), dopiero wtedy będzie można wejść z bagażami na pokład, zazwyczaj dopiero po godzinie 18
-
-2 turnus: 
-+ zaokrętowanie na gotowe - po przybyciu do mariny można odrazu wrzucić bagaże na jacht i w oczekiwaniu na resztę załogi pozwiedzać okolicę
-- zdanie łódki w ostatni dzień - zazwyczaj już ok. 9:00 załoga musi razem z bagażami opuścić pokład, późniejszy wylot wiąże się z koniecznością oddania bagaży do przechowalni
-
-Wyżywienie:
-we własnym zakresie 
-zazwyczaj śniadania, przekąski, i kilka większych posiłków zjemy na łódce 
-
-Dodatkowe koszty:
-dojazd we własnym zakresie
-tourist tax (ok. 10EUR /os.)
-paliwo (ok. 10EUR /os.)
-kaucja (30 EUR - do zwrotu po rejsie)
-składka jachtowa (80 EUR - wspólne jedzenie, opłaty portowe itp. - do rozliczenia w ostatni dzień) 
-[sternik nie płaci składki jachtowej]
-
-Plan rejsu:
-sobota - zaokrętowanie, zapoznanie się załogi, omówienie we wspólnym gronie gdzie płyniemy (w zależności od warunków atmosferycznych oraz od preferencji), podzielenie wacht
-niedziela - rano zakupy, śniadanie, krótkie szkolenie BHP i najpóźniej około południa wypływamy
-poniedziałek, wtorek, środa, czwartek - płyniemy tam gdzie chce załoga, przy założeniu, że warunki atmosferyczne na to pozwolą, oraz będziemy w stanie wrócić na czas. Żeglujemy turystycznie, nie żeglujemy w nocy ani w trudnych warunkach (umowa czarterowa wręcz zabrania wypływania przy sile wiatru powyżej 7bft). Przykładowe trasy: Trogir->Brać->Vis->Hvar->Korcula->Solta->Trogir, Trogir->Solta->Rogoznica->Sibenik->Vodice->Primosten
-piątek - najpóźniej 18:00 musimy wrócić do Trogiru, po drodze zatrzymując się na stacji uzupełnić paliwo
-sobota - wyokrętowanie
-
-Zdjęcia z ubiegłych rejsów
-
-Aby zarezerwować miejsce, należy skontaktować się mailowo/telefonicznie i wpłacić 50% kwoty jako zaliczkę. 
-W przypadku rezygnacji zaliczka nie podlego zwrotowi, chyba że znajdziesz kogoś na swoje miejsce. 
-Pozostała kwota jest do zapłaty do końca lipca 2024. W przypadku gdyby wyjazd nie mógł się odbyć, zaliczka zostanie zwrócona w całości.
-
-Przy rezerwacji całej kabiny (2 miejsca) zniżka 10%.
-Większe grupy - do negocjacji.
-
-
-Email w pierwszy dzień do podpisania: 
-Oświadczam że przeszedłem szkolenie BHP przeprowadzone w dniu .... przeprowadzonym przez .... oraz jestem świadom/świadomy, że znajdując się na pokładzie niestosowanie się do zasad BHP oraz poleceń sternika może skutkować wyproszeniem załoganta w najbliższym porcie bez zwrotu kosztów wyjazdu. -->
-
 <div
   class="trip-card"
   [class.auto-turn]="!startOpen"
   (mouseenter)="open()"
   [class.open]="isOpen"
-  >
+>
   <!-- (mouseleave)="hideWithDelay()" -->
   <div class="front">
     <div class="title">
@@ -83,9 +27,6 @@ Oświadczam że przeszedłem szkolenie BHP przeprowadzone w dniu .... przeprowad
         <img src="./assets/img/icons/calendar.png" class="icon" />
         21.09 - 28.09. (6 wolnych miejsc)
       </span>
-      <span>
-        Jeżeli nigdy nie byłeś/byłaś na rejsie jachtem żaglowym zapoznaj się z FAQ.
-      </span>
     </p>
     <p>
       <span>
@@ -103,40 +44,23 @@ Oświadczam że przeszedłem szkolenie BHP przeprowadzone w dniu .... przeprowad
         Kamil Nowak
       </span>
     </p>
-    <ng-container *ngIf="isExpanded">
-      <p>
-        <span>Cena obejmuje 1 miejsce w kabinie 2-osobowej</span>
-      </p>
-      <p>
-        <span>
-          Jacht posiada 4 kabiny 2-osobowe (1 zajmuje sternik), dla każdego komplet pościeli i ręczników
-          darmowe WiFi, w każdej kabinie gniazdka 230V (działające tylko przy podłączeniu do prądu w porcie)
-          poza tym w mesie jeden inwerter (jedno gniazdko 230V działające zawsze) oraz kilka gniazdek usb
-          max 8 osób (wliczając sternika) - jacht jest 10 osobowy więc nie będzie tłoku
-          tylko osoby +18
-        </span>
-      </p>
-      <p>
-        <span>
-          Dojazd:
-          samolot - Trogir jest blisko lotniska Split (ok. 6 km)
-          samochód - parking w marinie 60EUR / tydzień
-        </span>
-      </p>
-    </ng-container>
-    <ng-container *ngIf="!isExpanded">
-      <h2 class="price">
-        600 &#8364;
-        <div class="price-info">(~2650 PLN)</div>
-      </h2>
+    <p>
+      <a class="faq-link" routerLink="/faq" [queryParams]="{ section: 'faq' }">
+        Jeżeli nigdy nie byłeś/aś na rejsie jachtem żaglowym, zacznij od
+        <b class="accent">FAQ</b>
+      </a>
+    </p>
+    <h2 class="price">
+      600 &#8364;
+      <div class="price-info">(~2650 PLN)</div>
+    </h2>
 
-      <button class="more-btn" (click)="expand()">dowiedz się więcej</button>
-      <p>
-        <a href="tel:519167722" class="contact">lub zadzwoń: +48 519 167 722</a>
-      </p>
-      <p class="disclaimer">
-        Powyższa oferta ma charakter informacyjny i nie stanowi oferty handlowej
-      </p>
-    </ng-container>
+    <a class="more-btn" routerLink="/home" [queryParams]="{ section: 'trip' }">dowiedz się więcej</a>
+    <p>
+      <a href="tel:519167722" class="contact">lub zadzwoń: +48 519 167 722</a>
+    </p>
+    <p class="disclaimer">
+      Powyższa oferta ma charakter informacyjny i nie stanowi oferty handlowej
+    </p>
   </div>
 </div>

@@ -14,7 +14,6 @@ export class TripCardComponent implements OnInit, OnDestroy {
   startOpen = false;
 
   isOpen: boolean = false;
-  isExpanded: boolean = false;
   hideTimeoutId?: number;
 
 
@@ -43,10 +42,6 @@ export class TripCardComponent implements OnInit, OnDestroy {
     if (this.hideTimeoutId) {
       window.clearTimeout(this.hideTimeoutId)
     }
-  }
-
-  expand() {
-    this.isExpanded = true;
   }
 
   hideWithDelay() {

@@ -4,6 +4,7 @@
     <i class="fa-solid fa-bars"></i>
   </button>
   <div class="navigation-content" [class.show]="isOpen">
+    <a routerLink="/home" [queryParams]="{ section: 'trip' }">o rejsie</a>
     <a routerLink="/home" [queryParams]="{ section: 'portfolio' }">galeria</a>
     <a routerLink="/faq" [queryParams]="{ section: 'faq' }">faq</a>
   </div>

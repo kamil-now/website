@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
-import { DestinationCardComponent } from './components/destination-card/destination-card.component';
-import { DestinationsComponent } from './components/destinations/destinations.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { TripsComponent } from './components/trips/trips.component';
 import { AboutTripComponent } from './components/about-trip/about-trip.component';
@@ -27,8 +25,6 @@ import { YachtComponent } from './pages/yacht-page/yacht-page.component';
     HomePageComponent,
     LogoComponent,
     ImageCarouselComponent,
-    DestinationCardComponent,
-    DestinationsComponent,
     AboutUsComponent,
     TripsComponent,
     AboutTripComponent,
