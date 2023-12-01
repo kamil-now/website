@@ -2,19 +2,16 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: var(--color-text);
-  color: var(--color-text-light);
+  background-color: #212529;
+  color: #EBECF2;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  transition: all 0.3s ease-in-out;
-  max-height: 0;
-}
-.show {
   max-height: 200px;
 }
+
 .social-media {
   font-size: 1.5rem;
 }

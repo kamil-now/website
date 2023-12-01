@@ -1,0 +1,18 @@
+$padding-y: 12mm;
+$padding-x: 18mm;
+// A4
+$dim-x: 21cm;
+$dim-y: 29.7cm;
+
+:host {
+  background: white;
+  display: block;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+
+  width: calc(#{$dim-x} - 2*#{$padding-x});
+  height: calc(#{$dim-y} - 2*#{$padding-y});
+
+  padding: $padding-y $padding-x;
+
+  overflow: hidden;
+}
