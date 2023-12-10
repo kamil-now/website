@@ -1,11 +1,15 @@
-// carousel.component.ts
-
-import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { NgFor, NgIf } from '@angular/common';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
+  standalone: true,
   selector: 'app-image-carousel',
   templateUrl: './image-carousel.component.html',
-  styleUrls: ['./image-carousel.component.scss'],
+  styleUrl: './image-carousel.component.scss',
+  imports: [
+    NgIf,
+    NgFor
+  ]
 })
 export class ImageCarouselComponent implements OnInit, OnDestroy {
   @Input() fit: 'cover' | 'contain' = 'cover';
@@ -15,10 +19,10 @@ export class ImageCarouselComponent implements OnInit, OnDestroy {
     './assets/img/gallery/2.jpg',
     './assets/img/gallery/3.jpg',
   ];
-  
+
   currentIndex: number = 0;
   isFullScreen: boolean = false;
-  
+
   private autoPlayInterval?: number
   ngOnInit() {
     this.startAutoPlay();

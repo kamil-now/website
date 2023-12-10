@@ -1,7 +1,22 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { provideHttpClient } from '@angular/common/http';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { AppComponent } from './app/app.component';
+import { FaqPageComponent } from './app/pages/faq-page/faq-page.component';
+import { HomePageComponent } from './app/pages/home-page/home-page.component';
+import { YachtComponent } from './app/pages/yacht-page/yacht-page.component';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(
+  AppComponent,
+  {
+    providers: [
+      provideHttpClient(),
+      provideRouter([
+        { path: '', redirectTo: '/home', pathMatch: 'full' },
+        { path: 'home', component: HomePageComponent },
+        { path: 'faq', component: FaqPageComponent },
+        { path: 'dufour460', component: YachtComponent },
+      ])
+    ]
+  }
+);

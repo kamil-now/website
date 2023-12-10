@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
+  standalone: true,
   selector: 'app-collapse-card',
   templateUrl: './collapse-card.component.html',
-  styleUrls: ['./collapse-card.component.scss']
+  styleUrl: './collapse-card.component.scss',
 })
 export class CollapseCardComponent {
 

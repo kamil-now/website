@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { ImageCarouselComponent } from '../image-carousel/image-carousel.component';
 
 @Component({
+  standalone: true,
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrl: './portfolio.component.scss',
+  imports: [
+    ImageCarouselComponent
+  ]
 })
 export class PortfolioComponent {
 

@@ -1,10 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from "@angular/router";
+import { FooterComponent } from './components/footer/footer.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  imports: [
+    FooterComponent,
+    NavigationComponent,
+    RouterOutlet
+  ],
 })
 export class AppComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }

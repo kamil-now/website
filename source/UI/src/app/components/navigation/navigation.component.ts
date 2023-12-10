@@ -1,21 +1,23 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { isFirstVisit } from '../../storage';
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
+  standalone: true,
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './navigation.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    RouterLink,
+    LogoComponent
+  ],
 })
 export class NavigationComponent implements OnInit, AfterViewInit {
 
   @ViewChild('navigation')
   navigation!: ElementRef<HTMLElement>;
-
-  get currentRoute(): string {
-    return `/${this.route.routeConfig?.path}`;
-  }
 
   isOpen = false;
   isFirstVisit = false;
