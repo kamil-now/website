@@ -20,6 +20,22 @@
       phoneNumber="+48 519 167 722"
     >
     </app-trip-card>
+    <app-trip-card
+      [startOpen]="!isFirstVisit"
+      title="Grecja 2024"
+      flagImgSrc="../../../assets/img/icons/greece.png"
+      [dates]="[
+        '31.08 - 07.09. (5 wolnych miejsc)',
+        '07.09 - 14.09. (6 wolnych miejsc)'
+      ]"
+      marina="???"
+      yacht="???"
+      captain="Michał Śmieszkol"
+      [pricePLN]="2650"
+      [priceEUR]="600"
+      phoneNumber="+48 519 305 552"
+    >
+    </app-trip-card>
   </div>
 </div>
 <app-about-trip id="trip"></app-about-trip>
