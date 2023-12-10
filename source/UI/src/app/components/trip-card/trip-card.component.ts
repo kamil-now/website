@@ -11,25 +11,23 @@ import { RouterLink } from '@angular/router';
   ]
 })
 export class TripCardComponent implements OnInit, OnDestroy {
-  @Input()
-  backgroundImageUrl!: string;
-  @Input()
-  title!: string;
-  @Input()
-  startOpen = false;
+
+  @Input() title: string = '';
+  @Input() flagImgSrc: string = '';
+  @Input() marina: string = '';
+  @Input() yacht: string = '';
+  @Input() captain: string = '';
+  @Input() priceEUR: number = -1;
+  @Input() pricePLN: number = -1;
+  @Input() phoneNumber: string = '';
+  @Input() dates: string[] = [];
+  @Input() startOpen = false;
 
   isOpen: boolean = false;
   hideTimeoutId?: number;
 
 
   ngOnInit(): void {
-    if (!this.backgroundImageUrl) {
-      throw new Error('Background image url must be provided.')
-    }
-    if (!this.title) {
-      throw new Error('Title must be provided.')
-    }
-    this.backgroundImageUrl = `url(${this.backgroundImageUrl})`;
     this.isOpen = this.startOpen;
   }
 

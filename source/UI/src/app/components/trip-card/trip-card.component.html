@@ -1,10 +1,4 @@
-<div
-  class="trip-card"
-  [class.auto-turn]="!startOpen"
-  (mouseenter)="open()"
-  [class.open]="isOpen"
->
-  <!-- (mouseleave)="hideWithDelay()" -->
+<div class="trip-card" [class.auto-turn]="!startOpen" [class.open]="isOpen">
   <div class="front">
     <div class="title">
       <h1>{{ title }}</h1>
@@ -13,35 +7,33 @@
   <div class="back">
     <div>
       <h2 class="back-title">
-        <img src="./assets/img/icons/croatia.png" class="icon" />
+        <img [src]="flagImgSrc" class="icon" />
         {{ title }}
       </h2>
       <hr />
     </div>
     <p>
+      @for (date of dates; track date) {
       <span>
         <img src="./assets/img/icons/calendar.png" class="icon" />
-        14.09 - 21.09. (5 wolnych miejsc)
+        {{ date }}
       </span>
-      <span>
-        <img src="./assets/img/icons/calendar.png" class="icon" />
-        21.09 - 28.09. (6 wolnych miejsc)
-      </span>
+      }
     </p>
     <p>
       <span>
         <img src="./assets/img/icons/pin.png" class="icon" />
-        SCT Marina Trogir
+        {{ marina }}
         <!-- TODO link mapy -->
       </span>
       <span>
         <img src="./assets/img/icons/sailing-boat.png" class="icon" />
-        Dufour 460 GL 2017
+        {{ yacht }}
         <!-- TODO link do galerii -->
       </span>
       <span>
         <img src="./assets/img/icons/captain.png" class="icon" />
-        Kamil Nowak
+        {{ captain }}
       </span>
     </p>
     <p>
@@ -51,13 +43,15 @@
       </a>
     </p>
     <h2 class="price">
-      600 &#8364;
-      <div class="price-info">(~2650 PLN)</div>
+      {{ priceEUR }} &#8364;
+      <div class="price-info">(~{{ pricePLN }} PLN)</div>
     </h2>
 
-    <a class="more-btn" routerLink="/home" [queryParams]="{ section: 'trip' }">dowiedz się więcej</a>
+    <a class="more-btn" routerLink="/home" [queryParams]="{ section: 'trip' }"
+      >dowiedz się więcej</a
+    >
     <p>
-      <a href="tel:519167722" class="contact">lub zadzwoń: +48 519 167 722</a>
+      <a href="tel:519167722" class="contact">lub zadzwoń: {{ phoneNumber }}</a>
     </p>
     <p class="disclaimer">
       Powyższa oferta ma charakter informacyjny i nie stanowi oferty handlowej

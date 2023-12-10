@@ -5,9 +5,19 @@
   </div>
   <div class="home-content">
     <app-trip-card
-      title="Chorwacja 2024"
       [startOpen]="!isFirstVisit"
-      backgroundImageUrl="../../../assets/img/croatia2.jpg"
+      title="Chorwacja 2024"
+      flagImgSrc="../../../assets/img/icons/croatia.png"
+      [dates]="[
+        '14.09 - 21.09. (5 wolnych miejsc)',
+        '21.09 - 28.09. (6 wolnych miejsc)'
+      ]"
+      marina="SCT Marina Trogir"
+      yacht="Dufour 460 GL 2017"
+      captain="Kamil Nowak"
+      [pricePLN]="2650"
+      [priceEUR]="600"
+      phoneNumber="+48 519 167 722"
     >
     </app-trip-card>
   </div>
