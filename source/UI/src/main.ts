@@ -1,3 +1,4 @@
+import { provideZoneChangeDetection } from "@angular/core";
 import { provideHttpClient } from '@angular/common/http';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
@@ -10,7 +11,7 @@ bootstrapApplication(
   AppComponent,
   {
     providers: [
-      provideHttpClient(),
+      provideZoneChangeDetection(),provideHttpClient(),
       provideRouter([
         { path: '', redirectTo: '/home', pathMatch: 'full' },
         { path: 'home', component: HomePageComponent },
