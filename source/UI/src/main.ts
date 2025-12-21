@@ -14,9 +14,9 @@ bootstrapApplication(
       provideZoneChangeDetection(),provideHttpClient(),
       provideRouter([
         { path: '', redirectTo: '/home', pathMatch: 'full' },
-        { path: 'home', component: HomePageComponent },
-        { path: 'faq', component: FaqPageComponent },
-        { path: 'dufour460', component: YachtComponent },
+        // { path: 'home', component: HomePageComponent },
+        // { path: 'faq', component: FaqPageComponent },
+        // { path: 'dufour460', component: YachtComponent },
       ])
     ]
   }
