@@ -2,14 +2,13 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
-  standalone: true,
-  selector: 'app-image-carousel',
-  templateUrl: './image-carousel.component.html',
-  styleUrl: './image-carousel.component.scss',
-  imports: [
-    NgIf,
-    NgFor
-  ]
+    selector: 'app-image-carousel',
+    templateUrl: './image-carousel.component.html',
+    styleUrl: './image-carousel.component.scss',
+    imports: [
+        NgIf,
+        NgFor
+    ]
 })
 export class ImageCarouselComponent implements OnInit, OnDestroy {
   @Input() fit: 'cover' | 'contain' = 'cover';

@@ -5,16 +5,15 @@ import { AboutTripComponent } from 'src/app/components/about-trip/about-trip.com
 import { LogoComponent } from 'src/app/components/logo/logo.component';
 import { TripCardComponent } from 'src/app/components/trip-card/trip-card.component';
 @Component({
-  standalone: true,
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss',
-  imports: [
-    LogoComponent,
-    TripCardComponent,
-    PortfolioComponent,
-    AboutTripComponent,
-  ]
+    selector: 'app-home-page',
+    templateUrl: './home-page.component.html',
+    styleUrl: './home-page.component.scss',
+    imports: [
+        LogoComponent,
+        TripCardComponent,
+        PortfolioComponent,
+        AboutTripComponent,
+    ]
 })
 export class HomePageComponent implements OnInit {
 

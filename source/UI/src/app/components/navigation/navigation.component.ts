@@ -4,15 +4,14 @@ import { isFirstVisit } from '../../storage';
 import { LogoComponent } from '../logo/logo.component';
 
 @Component({
-  standalone: true,
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    RouterLink,
-    LogoComponent
-  ],
+    selector: 'app-navigation',
+    templateUrl: './navigation.component.html',
+    styleUrl: './navigation.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        RouterLink,
+        LogoComponent
+    ]
 })
 export class NavigationComponent implements OnInit, AfterViewInit {
 

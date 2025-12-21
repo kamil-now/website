@@ -2,13 +2,12 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  standalone: true,
-  selector: 'app-trip-card',
-  templateUrl: './trip-card.component.html',
-  styleUrl: './trip-card.component.scss',
-  imports: [
-    RouterLink
-  ]
+    selector: 'app-trip-card',
+    templateUrl: './trip-card.component.html',
+    styleUrl: './trip-card.component.scss',
+    imports: [
+        RouterLink
+    ]
 })
 export class TripCardComponent implements OnInit, OnDestroy {
 
