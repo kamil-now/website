@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'animations';
+@use 'mixins' as *;
+@use 'animations' as *;
 
 .show-logo {
 	app-logo {
